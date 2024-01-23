@@ -9,8 +9,8 @@ function AppLayout() {
   // console.log(navigation);
   return (
     <div className="grid h-screen grid-rows-[auto,1fr,auto]">
-      {/* {isLoding && <Loader />} */}
-      {true && <Loader />}
+      {isLoding && <Loader />}
+
       <Headers />
       <div className="overflow-x-auto">
         <main className="mx-auto max-w-3xl">

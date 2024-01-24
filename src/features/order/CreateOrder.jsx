@@ -1,11 +1,13 @@
 // https://uibakery.io/regex-library/phone-number
-import { useState } from 'react';
+
 import { Form } from 'react-router-dom';
 
 import { redirect, useActionData } from 'react-router-dom';
 import { createOrder } from '../../services/apiRestaurant';
-import { useNavigate } from 'react-router-dom';
+
 import Button from '../../ui/Button';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const isValidPhone = (str) =>
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
@@ -14,21 +16,21 @@ const isValidPhone = (str) =>
 
 const fakeCart = [
   {
-    pizzaId: 12,
+    pizzaId: 16,
     name: 'Mediterranean',
     quantity: 2,
     unitPrice: 16,
     totalPrice: 32,
   },
   {
-    pizzaId: 6,
+    pizzaId: 7,
     name: 'Vegetale',
     quantity: 1,
     unitPrice: 13,
     totalPrice: 13,
   },
   {
-    pizzaId: 11,
+    pizzaId: 10,
     name: 'Spinach and Mushroom',
     quantity: 1,
     unitPrice: 15,
@@ -37,6 +39,8 @@ const fakeCart = [
 ];
 
 function CreateOrder() {
+const userName = useSelector(state=>state.user.userName)
+
   // const [withPriority, setWithPriority] = useState(false);
   const cart = fakeCart;
   const navigation = useNavigate();
@@ -49,7 +53,7 @@ function CreateOrder() {
 
       <Form method="post">
         <div className='flex flex-col sm:flex-row py-2 '>
-          <label className='sm:basis-40'>First Name</label>
+          <label className='sm:basis-40'  defaultValue={userName}>First Name</label>
           <input className="input grow" type="text" name="customer" required />
         </div>
 

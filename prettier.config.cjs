@@ -1,9 +1,9 @@
 /** @type {import('prettier').Config} */
 module.exports = {
-  semi: false,
+  semi: true,
   singleQuote: true,
-  trailingComma: 'all',
-  pluginSearchDirs: false,
-  plugins: ['@ianvs/prettier-plugin-sort-imports'],
+  trailingComma: 'es5',
+  pluginSearchDirs: true,
+   plugins: ['eslint-config-prettier'],
   importOrder: ['^@', '^[a-zA-Z0-9-]+', '^[./]'],
 }

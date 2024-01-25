@@ -10,13 +10,15 @@ function Cart() {
   const userName = useSelector(state=>state.user.userName)
   const cart =  useSelector(getCart);
   const dispatch = useDispatch()
-  
+ 
 
 if(!cart.length) return <EmptyCart/>
   function clearHandler() { 
  
 dispatch(clearCart())
   }
+
+ 
 
   return (
     <div>

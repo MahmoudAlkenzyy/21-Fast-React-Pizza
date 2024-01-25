@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 function UpdateItemQuantity({pizzaId,quantity}) {
   const dispatch = useDispatch()
   
-  console.log(quantity)
+  
     return (
         <div className="flex gap-2 md:gap-3 items-center">
             <Button onClick={() => dispatch(decreseItemQuantity(pizzaId))} type='rounded'>-</Button>

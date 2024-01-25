@@ -10,6 +10,8 @@ export default {
     extend: {
       fontSize: {
         huge: ['80rem', { lineHeight: '1' }],
+      },height: {
+        screen: '100ddvh',
       },
      
     },

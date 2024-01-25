@@ -61,7 +61,7 @@ const userName = useSelector(state=>state.user.userName)
           <label className='sm:basis-40 '>Phone number</label>
           <div className='grow'>
             <input className="input w-full " type="tel" name="phone" required />
-        <p className='mt-2 text-red-700 bg-red-100 p-2 rounded-md text-sm'>{formErrors?.phone && formErrors.phone}</p>
+        {formErrors?.phone && <p className='mt-2 text-red-700 bg-red-100 p-2 rounded-md text-sm'>formErrors.phone</p>}
           </div>
         </div>
 

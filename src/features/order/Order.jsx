@@ -24,12 +24,12 @@ function Order() {
   
     return (
         <div className='space-y-6 px-4 py-6'>
-            <div className='flex items-center justify-between'>
+            <div className='flex flex-wrap space-y-3 items-center justify-between'>
                 <h2 className=' font-bold'>Order ${id} Status</h2>
 
-                <div className='space-x-2'>
-                    {priority && <span className='bg-red-500  uppercase tracking-wider  text-red-50 rounded-full px-3 py-1 text-sm    '>Priority</span>}
-                    <span className='bg-green-500  uppercase tracking-wider  text-green-50 rounded-full px-3 py-1 text-sm    '>{status} order</span>
+                <div className='sm:space-x-2  items-center flex-col sm:flex-row'>
+                    {priority && <span className='bg-red-500  uppercase tracking-wider  text-red-50 rounded-full px-3 py-1 text-sm '>Priority</span>}
+                    <span className='bg-green-500  uppercase tracking-wider  text-green-50 rounded-full px-3 py-1 text-sm'>{status} or</span>
                 </div>
             </div>
 

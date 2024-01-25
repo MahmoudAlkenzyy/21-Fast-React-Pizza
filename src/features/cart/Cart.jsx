@@ -21,7 +21,7 @@ dispatch(clearCart())
  
 
   return (
-    <div>
+    <div className='px-3 sm:px-0'>
       <LinkButton
         className="text-sm text-blue-500 hover:text-blue-600"
         to="/menu"

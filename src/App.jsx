@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import Home from './ui/Home';
 import Menu, { Loader as menuLodaer } from './features/menu/Menu';
 import Order, { loader as orderLoader } from './features/order/Order';
@@ -11,7 +11,7 @@ import AppLayout from './ui/AppLayout';
 import Error from './ui/Error';
 
 function App() {
-    const router = createBrowserRouter([
+    const router = createHashRouter([
         {
             element: <AppLayout />,
             errorElement: <Error />,
